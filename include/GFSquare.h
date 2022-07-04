@@ -3,17 +3,17 @@
 #include "geometric_figure.h"
 #include "GFRectangle.h"
 
-class GFCircle: public GeometricFigure {
-    double radius = 0;
+class GFSquare : public GeometricFigure {
+    double side = 0;
 public:
     // constructors
-    GFCircle();
+    GFSquare();
 
     // setters
-    void setRadius(double inRadius);
+    void setSide(double inSide);
 
     // getters
-    double getRadius() const;
+    double getSide() const;
 
     // methods
     double area() const;

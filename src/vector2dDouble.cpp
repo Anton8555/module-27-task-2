@@ -9,8 +9,8 @@ void Vector2DDouble::setX(double value) { X = value; }
 void Vector2DDouble::setY(double value) { Y = value; }
 
 // getters
-int Vector2DDouble::getX() { return X; }
-int Vector2DDouble::getY() { return Y; }
+double Vector2DDouble::getX() const { return X; }
+double Vector2DDouble::getY() const { return Y; }
 
 // methods
 
@@ -32,7 +32,7 @@ void Vector2DDouble::add(Vector2DDouble v) {
  * @param yHigh - Upper value of the input range for the Y-coordinate.
  * @return Returns a vector in the given range.
 */
-void Vector2DDouble::input(string caption, double xLow, double xHigh, double yLow, double yHigh) {
+void Vector2DDouble::input(const string &caption, double xLow, double xHigh, double yLow, double yHigh) {
     cout << caption << endl;
     cout << "Range [" << xLow << "; " << xHigh << "];\n";
     X = doubleInput("X =", xLow, xHigh);
@@ -40,7 +40,11 @@ void Vector2DDouble::input(string caption, double xLow, double xHigh, double yLo
     Y = doubleInput("Y =", yLow, yHigh);
 }
 
-string Vector2DDouble::output() {
+/*!
+ * @brief Subroutine for getting a vector in string representation.
+ * @return Returns a string in the format "(X; Y)".
+ */
+string Vector2DDouble::output() const {
     return "(" + to_string(X) + "; " + to_string(Y) + ")";
 }
 
@@ -51,7 +55,7 @@ string Vector2DDouble::output() {
  * @param high - upper value of the input range.
  * @return Returns a real number within the given range.
  */
-double doubleInput(string caption, double low, double high) {
+double doubleInput(const string &caption, double low, double high) {
     int value;
     do {
         cout << caption;
@@ -67,7 +71,7 @@ double doubleInput(string caption, double low, double high) {
  * @param high - upper value of the input range.
  * @return Returns an integer number within the given range.
  */
-int intInput(string caption, int low, int high) {
+int intInput(const string &caption, int low, int high) {
     int value;
     do {
         cout << caption;

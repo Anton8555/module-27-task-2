@@ -12,12 +12,12 @@ public:
     GeometricFigure();
 
     // setters
-    void setCenter(Vector2DDouble inCenter);
+    void setCenter(const Vector2DDouble &inCenter);
     void setColor(Color inColor);
 
     // getters
-    Vector2DDouble getCenter();
-    Color getColor();
+    Vector2DDouble getCenter() const;
+    Color getColor() const;
 };
 
 string ColorToString(Color color);

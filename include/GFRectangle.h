@@ -14,10 +14,10 @@ public:
     void setHeight(double inHeight);
 
     // getters
-    double getWidth();
-    double getHeight();
+    double getWidth() const;
+    double getHeight() const;
 
     // methods
-    double area();  // площадь фигуры
-    GFRectangle* findingRectangle();   // нахождение прямоугольника, описывающего фигуру полностью
+    double area() const;
+    GFRectangle* findingRectangle() const;
 };

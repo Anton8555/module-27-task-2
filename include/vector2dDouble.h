@@ -18,17 +18,17 @@ public:
     void setY(double value);
 
     // getters
-    int getX();
-    int getY();
+    double getX() const;
+    double getY() const;
 
     // methods
     void add(Vector2DDouble v);
-    void input(string caption, double xLow, double xHigh, double yLow, double yHigh);
-    string output();
+    void input(const string &caption, double xLow, double xHigh, double yLow, double yHigh);
+    string output() const;
 };
 
 // Subroutine for entering a real within a range.
-double doubleInput(string caption, double low, double high);
+double doubleInput(const string &caption, double low, double high);
 
 // Subroutine for entering an integer within a range.
-int intInput(string caption, int low, int high);
+int intInput(const string &caption, int low, int high);

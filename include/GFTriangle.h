@@ -2,18 +2,20 @@
 
 #include "geometric_figure.h"
 #include "GFRectangle.h"
+#include <cmath>
+using namespace std;
 
-class GFCircle: public GeometricFigure {
-    double radius = 0;
+class GFTriangle : public GeometricFigure {
+    double side = 0;
 public:
     // constructors
-    GFCircle();
+    GFTriangle();
 
     // setters
-    void setRadius(double inRadius);
+    void setSide(double inSide);
 
     // getters
-    double getRadius() const;
+    double getSide() const;
 
     // methods
     double area() const;
